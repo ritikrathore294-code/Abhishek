@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DTC Pass Demo</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f1f3f5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.pass {
+  width: 360px;
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,.15);
+}
+
+.header {
+  background: #087f5b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 23px;
+}
+
+.header p {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.demo {
+  background: #fff3bf;
+  color: #8d6b00;
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.content {
+  padding: 22px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.label {
+  color: #777;
+  font-size: 13px;
+}
+
+.value {
+  font-weight: bold;
+  font-size: 14px;
+  text-align: right;
+}
+
+.qr {
+  text-align: center;
+  margin: 22px 0 12px;
+}
+
+.qr img {
+  width: 130px;
+  height: 130px;
+}
+
+.qr p {
+  font-size: 11px;
+  color: #888;
+  margin-top: 7px;
+}
+
+.footer {
+  background: #f8f9fa;
+  padding: 14px;
+  text-align: center;
+  font-size: 11px;
+  color: #777;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #087f5b;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="pass">
+
+  <div class="header">
+    <h1>DTC PASS — DEMO</h1>
+    <p>Delhi Transport Pass Concept</p>
+  </div>
+
+  <div class="demo">
+    EDUCATIONAL DEMO • NOT A VALID TRAVEL PASS
+  </div>
+
+  <div class="content">
+
+    <div class="row">
+      <span class="label">Passenger</span>
+      <span class="value">Demo User</span>
+    </div>
+
+    <div class="row">
+      <span class="label">Pass ID</span>
+      <span class="value">DEMO-DTC-001</span>
+    </div>
+
+    <div class="row">
+      <span class="label">Pass Type</span>
+      <span class="value">Monthly Demo Pass</span>
+    </div>
+
+    <div class="row">
+      <span class="label">Valid From</span>
+      <span class="value">01/09/2026</span>
+    </div>
+
+    <div class="row">
+      <span class="label">Valid Till</span>
+      <span class="value">30/09/2026</span>
+    </div>
+
+    <div class="qr">
+      <img
+        src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=DTC-DEMO-NOT-VALID"
+        alt="Demo QR">
+      <p>QR contains demo information only</p>
+    </div>
+
+    <button onclick="showMessage()">
+      Verify Demo Pass
+    </button>
+
+  </div>
+
+  <div class="footer">
+    This is a student/educational UI project and has no validity for travel.
+  </div>
+
+</div>
+
+<script>
+function showMessage() {
+  alert("DEMO PASS — NOT VALID FOR DTC TRAVEL");
+}
+</script>
+
+</body>
+</html>
